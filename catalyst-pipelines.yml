@@ -1,18 +1,22 @@
 version: 1
 jobs:
- 
-  world:
+ hello:
     steps:
-      - npm install -g zcatalyst-cli
-      - catalyst deploy
-  job1:
+      - echo "Hello"
+ world:
+    steps:
+      - echo "World"
+ hello-world:
+    steps:
+      - echo "Hello World!"
+ job1:
     runner: runner1
     image: image1
     cwd: /path
     steps:
       - "jobs:\r"
       - '      -deploy'
-  job2:
+ job2:
     steps:
       - >-
         catalyst deploy appsail --name << env.APPLICATION_NAME >> --build-path
