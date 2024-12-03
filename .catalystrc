@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "5053000000469105",
+      "name": "tutorial-authentication-master",
+      "domain": {
+        "id": "50023708419",
+        "name": "tutorial-authentication-master-60022986418.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60022986418",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

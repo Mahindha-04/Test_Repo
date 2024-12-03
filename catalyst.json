@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "tutorial_authentication_master_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}
