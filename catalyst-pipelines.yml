@@ -1,14 +1,10 @@
 version: 1
 jobs:
-  hello:
-    steps:
-      - echo "Hello"
+ 
   world:
     steps:
-      - echo "World"
-  hello-world:
-    steps:
-      - echo "Hello World!"
+      - npm install -g zcatalyst-cli
+      - catalyst deploy
   job1:
     runner: runner1
     image: image1
@@ -31,9 +27,7 @@ jobs:
 stages:
   - name: build
     jobs:
-      - - hello
         - world
-      - hello-world
   - name: stage1
     jobs:
       - job1
