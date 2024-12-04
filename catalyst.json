@@ -1,7 +1,7 @@
 {
   "functions": {
     "targets": [
-      "to_do_list_function"
+      "tutorial_authentication_master_function"
     ],
     "ignore": [],
     "source": "functions"

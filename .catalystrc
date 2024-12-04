@@ -22,7 +22,15 @@
           "idx": 1,
           "id": "60022986418",
           "name": "Development",
-          "type": 3
+          "type": 3,
+          "env_status": "Active",
+          "project_details": {
+            "project_name": "tutorial-authentication-master",
+            "id": "5053000000469105",
+            "project_type": "Live"
+          },
+          "is_default": true,
+          "action_required": false
         }
       ]
     }
