@@ -7,8 +7,8 @@ images:
     image: node:18
     registry: https://registry.npmjs.org/
     auth:
-      username: << env.USER_NAME >>
-      password: << env.USER_PASSWORD >>
+      username: Mahi
+      password: user08@elite
 jobs:
   CatalystDeploy:
     runner: Machine
@@ -16,7 +16,7 @@ jobs:
     steps:
       - npm install -g zcatalyst-cli@latest
       - node --version
-      - catalyst deploy --project << env.PROJECT_ID >> --org << env.CATALYST_ORGID >> --token << env.CATALYST_TOKEN >>
+      - catalyst deploy --project 5053000000469105 --org 60022986418 --token m_1004.b2bc22a458932bc8db1f2ff5a5d220ac.3bebac6ce89533b6443f31712d083ddc
 stages:
   - name: deploymentStage
     jobs:
