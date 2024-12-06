@@ -2,17 +2,9 @@ version: 1
 runners:
   Machine:
     config-id: 2
-images:
-  image:
-    image: node:18
-    registry: https://registry.npmjs.org/
-    auth:
-      username: env.Mahindha-04
-      password: env.M@hindha@28
 jobs:
   CatalystDeploy:
     runner: Machine
-    image: image
     steps:
       - npm install -g zcatalyst-cli@latest
       - node --version
