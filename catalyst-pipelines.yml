@@ -7,8 +7,8 @@ images:
     image: node:18
     registry: https://registry.npmjs.org/
     auth:
-      username: Mahi
-      password: user08@elite
+      username: user1@demo.elitetechpark.com
+      password: Elite@123
 jobs:
   CatalystDeploy:
     runner: Machine
