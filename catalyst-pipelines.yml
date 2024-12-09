@@ -6,6 +6,8 @@ jobs:
   CatalystDeploy:
     runner: Machine
     steps:
+      - apt-get update
+      - apt-get install -y nodejs npm
       - npm install -g zcatalyst-cli@latest
       - node --version
       - catalyst deploy --project '5053000000469105' --org '60022986418' --token 'm_1004.01481716c99702fe0f9412a196500357.3c5bd0472ebee7b973b846634c367027'
