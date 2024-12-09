@@ -8,7 +8,7 @@ jobs:
     steps:
       - npm install -g zcatalyst-cli@latest
       - node --version
-      - catalyst deploy --project'5053000000469105' --org'60022986418' --token'm_1004.b2bc22a458932bc8db1f2ff5a5d220ac.3bebac6ce89533b6443f31712d083ddc'
+      - catalyst deploy --project '5053000000469105' --org '60022986418' --token 'm_1004.b2bc22a458932bc8db1f2ff5a5d220ac.3bebac6ce89533b6443f31712d083ddc'
 stages:
   - name: deploymentStage
     jobs:
