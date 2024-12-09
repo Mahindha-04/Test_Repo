@@ -1,53 +1,15 @@
 version: 1
-jobs:
- hello:
-    steps:
-      - echo "Hello"
- world:
-    steps:
-      - echo "World"
- hello-world:
-    steps:
-      - echo "Hello World!"
- job1:
-    runner: runner1
-    image: image1
-    cwd: /path
-    steps:
-      - "jobs:\r"
-      - '      -deploy'
- job2:
-    steps:
-      - >-
-        catalyst deploy appsail --name << env.APPLICATION_NAME >> --build-path
-        "<< env.PACKAGE_PATH >>" --stack << env.STACK >> --platform <<
-        env.PLATFORM >> --command "<< env.STARTUP_COMMAND >>" --verbose
-    artifacts:
-      download:
-        - type: file
-          name: SNAPSHOT.jar
-          file: /SNAPSHOT.jar
-          location: stratus://<< env.BUCKET_NAME >>/
-stages:
-  - name: build
-    jobs:
-        - world
-  - name: stage1
-    jobs:
-      - job1
-    when:
-      equal:
-        - << status.build >>
-        - success
-variables:
-  variable1: SHOULD_RUN
-images:
-  image1:
-    image: node:18
-    registry: https://registry.npmjs.org/
-    auth:
-      username: Mahi
-      password: user08@elite
 runners:
-  runner1:
-    config-id: 1
+  Machine:
+    config-id: 2
+jobs:
+  CatalystDeploy:
+    runner: Machine
+    steps:
+      - npm install -g zcatalyst-cli@latest
+      - node --version
+      - catalyst deploy --project '5053000000469105' --org '60022986418' --token 'm_1004.b2bc22a458932bc8db1f2ff5a5d220ac.3bebac6ce89533b6443f31712d083ddc'
+stages:
+  - name: deploymentStage
+    jobs:
+      - CatalystDeploy
