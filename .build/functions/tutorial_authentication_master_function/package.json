@@ -1,0 +1,9 @@
+{
+	"name": "tutorial_authentication_master_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "user1@demo.elitetechpark.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}
